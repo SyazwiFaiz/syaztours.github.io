@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300&family=Anton&display=swap');
+
+html, body {
+    margin: 0; /* Remove default margin from both elements */
+    padding: 0; /* Remove default padding from both elements */
+    height: 100%; /* Set height to 100% for both elements */
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Minimum height of the body */
+    font-family: 'Poppins', sans-serif;
+    background-image: url('assets/Background.jpg');
+    background-size: cover; /* This will cover the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+.index-background {
+    /* This can be used for any additional styling specific to this class */
+    position: relative; /* Ensure that positioning is based on the section */
+}
+
+
+
+
+/* Navbar container styling */
+.navbar {
+    margin: 0;
+    padding: 0;
+    position: sticky; /* Ensure navbar sticks to the top */
+    z-index: 1000; /* High z-index to stay above other elements */
+    background-color: rgba(128, 128, 128, 0.8); /* Semi-transparent grey background for the navbar */
+    padding: 20px; /* Adjust padding to make navbar smaller */
+    border-radius: 50px; /* Rounded navbar */
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2em auto; /* Center the navbar */
+}
+
+/* Navbar link styles */
+.nav-link {
+    color: #2874a6; /* Set initial text color */
+    padding: 10px 10px; /* Reduce padding to make the buttons closer */
+    font-size: 22px; /* Initial font size */
+    border-radius: 20px; /* Add border-radius */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Adjust margin between navbar items */
+.nav-item {
+    display: inline-block;
+    vertical-align: middle; /* Keep items aligned properly */
+    margin-left: 5px; /* Decrease margin between items */
+}
+
+/* Logo styles */
+.navbar-brand .logo {
+    width: 60px; /* Adjust logo width */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align logo vertically with the text */
+    margin-right: 5px; /* Decrease space between logo and text */
+}
+
+/* Hover effect */
+
+/* Center-align logo and text inside the navbar */
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Vertically align logo and text */
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: #000000; /* Change text color to black */
+}
+
+.syaz {
+    color: #2874a6; /* Color for 'Syaz' (Blue) */
+    font-weight: bold; /* Make 'Syaz' bold */
+    font-family: 'Poppins', sans-serif; /* Font for 'Syaz' */
+    font-size: 30px; /* Font size for 'Syaz' */
+}
+
+.tours {
+    color: #943501; /* Color for 'Tours' (Brownish-red) */
+    font-weight: bold; /* Make 'Tours' bold */
+    font-family: 'Poppins', sans-serif; /* Font for 'Tours' */
+    font-size: 30px; /* Font size for 'Tours' */
+}
+
+/* Hover effect */
+.nav-link:hover {
+    background-color: #2874a6; /* Change background color on hover */
+    color: #ffffff; /* Change text color to white */
+}
+
+/* Prevent navbar item shifting on hover */
+.nav-item {
+    display: inline-block;
+    vertical-align: middle; /* Keep items aligned properly */
+}
+
+/* Adjust logo styles */
+.navbar-brand img {
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0.5em; /* Optional: Add some space between logo and text */
+}
+
+
+
+/* Quote Container */
+.quote-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100vh - 120px); /* Adjust height to fit below the navbar */
+    padding-left: 9em; /* Adjust to move it a bit from the left */
+    margin-bottom: 7em;
+    /* Background image can be removed here if using body */
+}
+/* Quote styles */
+.quote {
+    margin-bottom: 4em;
+    font-family: 'Playfair Display', serif; /* Use a stylish, elegant font for the quote */
+    font-size: 3em; /* Font size for the entire quote */
+    text-align: left; /* Align text to the left */
+    line-height: 1.3; /* Adjust line spacing for readability */
+    letter-spacing: 1px; /* Add slight letter-spacing for readability */
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5); /* Add a soft shadow for 3D effect */
+}
+
+.button-join {
+    background-color: #2874a6; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default borders */
+    border-radius: 50px; /* Rounded corners */
+    padding: 12px 25px; /* Adjust padding to make the button look proportional */
+    font-size: 20px; /* Font size */
+    font-family: 'Poppins', sans-serif; /* Font style */
+    font-weight: bold;
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow for 3D effect */
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 1px; /* Add slight spacing between letters */
+}
+
+/* Hover effect */
+.button-join:hover {
+    background-color: #943501; /* Change background color on hover */
+    color: #ffffff; /* Text color on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Button focus style */
+.button-join:focus {
+    outline: none; /* Remove default outline on focus */
+    box-shadow: 0 0 0 3px rgba(40, 116, 166, 0.4); /* Add custom focus outline */
+}
+
+/* Responsive: Adjust size for smaller screens */
+@media (max-width: 768px) {
+    .button-join {
+        padding: 10px 20px; /* Smaller padding on mobile */
+        font-size: 16px; /* Smaller font size */
+    }
+}
+
+/* Specific quote parts */
+.discover {
+    font-family:'Anton', sans-serif; /* Use Poppins for "Discover" */
+    color: #ffffff; /* Set color to white */
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0; /* Fully transparent */
+    }
+    100% {
+        transform: translateX(0); /* End at its original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.world {
+    font-family: "Anton", sans-serif; 
+    font-weight: bold; 
+    color: #ffffff; 
+    font-size: 120px; 
+    animation: slideInLeft 1.5s ease-in-out forwards; /* Smooth easing */
+    animation-delay: 0.5s; /* Delay to make it enter after other text */
+    -webkit-animation: slideInLeft 1.5s ease-in-out forwards; /* For older WebKit browsers */
+}
+
+.with-us {
+    font-family: 'Anton', sans-serif; /* Use Poppins for "with Us." */
+    color: #ffffff; /* Set color to white */
+}
+
+
+.text-center {
+    margin-top: 1em;
+    font-size: 2.5rem; /* Larger font size for the title */
+    margin-bottom: 2rem; /* Space below the title */
+    color: #2874a6; /* Primary color */
+    font-family: 'Anton', sans-serif; /* Google Fonts */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+}
+
+.place-section {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    margin-top: 3em; /* Reduced bottom margin */
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Ensure no white space appears on the edges */
+    padding-bottom: 50px; /* Adjust as needed */
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    padding: 10px;
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    position: relative; /* For positioning child elements */
+}
+
+.card img {
+    height: 200px; /* Adjusted image height */
+    object-fit: cover; /* Maintain image aspect ratio */
+    transition: transform 0.3s ease; /* Smooth zoom */
+}
+
+.card:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.card-body {
+    background-color: #fff; /* White background for card body */
+    border-top: 5px solid #2874a6; /* Highlight border at the top */
+    padding: 2em; /* Add padding */
+    text-align: center; /* Center align text */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Font size for card title */
+    font-weight: bold; /* Bold title */
+    color: #333; /* Darker text color */
+    margin-bottom: 0.5rem; /* Space below title */
+}
+
+.card-text {
+    font-size: 1rem; /* Font size for text */
+    color: #555; /* Dark grey text color */
+    margin-bottom: 1rem; /* Space below text */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #2874a6; /* Button background color */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded button corners */
+    padding: 10px 20px; /* Padding for button */
+    color: white; /* White text */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.btn-primary:hover {
+    background-color: #1e5b8b; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+
+/* Place End CSS */
+
+/* Footer Section */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px; /* Less padding for mobile */
+    }
+
+    .quote {
+        font-size: 2em; /* Smaller font size for mobile */
+    }
+
+    .button-join {
+        font-size: 16px; /* Adjust button font size for mobile */
+    }
+
+    .world {
+        font-size: 80px; /* Adjust font size for mobile */
+    }
+
+}
+
+
+
+.about-section {
+    background-color: #ffffff; /* Light background for contrast */
+    margin-top: 1em;
+    padding: 0; /* Reduced top/bottom padding */
+    text-align: center; /* Center align text */
+    height: auto;
+}
+
+
+.about-title {
+    font-size: 2.5rem; /* Larger font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #2874a6; /* Primary color */
+    font-family: 'Anton', sans-serif; /* Font from Google Fonts */
+}
+
+.about-img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+
+.about-description-container {
+    display: flex;
+    flex-direction: row-reverse; /* Places the first paragraph on the right */
+    gap: 50px; /* Space between the two paragraphs */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+}
+
+.about-description {
+    flex: 10; /* Each paragraph takes up equal space */
+    font-size: 1.2rem;
+    width: 100%;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+.about-button {
+    margin: 0;
+    padding: 10px 40px;
+    margin-bottom: 5em;
+    /*Buttonpadding*/font-size: 1rem;
+    /*Buttonfontsize*/border: none;
+    /*Removeborder*/border-radius: 50px;
+    /*Roundedcorners*/background-color: #2874a6;
+    /*Buttoncolor*/color: white;
+    /*Buttontextcolor*/text-decoration: none;
+    /*Removeunderline*/transition: background-color 0.3s;
+     /* Smooth transition for hover */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.about-button:hover {
+    background-color: #1c5984; /* Darker shade on hover */
+}
+
+/* Service css */
+
+.service-section {
+    padding: 0;
+    margin: 0;
+    margin-top: 7em;
+    background-color: #ffffff; /* Light grey background */
+    padding: 0 50px; /* Top/bottom and left/right padding */
+    text-align: center; /* Center align text */
+    height: 95vh;
+}
+
+.service-title {
+    font-size: 2.5rem; /* Larger font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #2874a6; /* Primary color */
+    font-family: 'Anton', sans-serif; /* Font from Google Fonts */
+}
+
+.service-description {
+    font-size: 1.2rem; /* Medium font size for the description */
+    margin-bottom: 40px; /* Space below the paragraph */
+    color: #555; /* Darker text color for readability */
+    line-height: 1.6; /* Improve line spacing */
+}
+
+.service-cards {
+    display: flex; /* Use flexbox for card layout */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center align cards */
+    gap: 20px; /* Space between cards */
+}
+
+.service-card {
+    padding: 0;
+    margin: 0;
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    width: calc(25% - 20px); /* Set width to 25% minus the gap */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Scale up card on hover */
+}
+
+.service-card-title {
+    font-size: 1.5rem; /* Larger font size for card titles */
+    color: #2874a6; /* Primary color */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.service-card-text {
+    font-size: 1rem; /* Medium font size for text */
+    color: #333; /* Darker text color for readability */
+    line-height: 1.5; /* Improve line spacing */
+}
+
+.service-card-icon {
+    font-size: 3rem; /* Adjust icon size */
+    margin-bottom: 15px; /* Space below the icon */
+}
+
+.service-button {
+    background-color: #0d47a1; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 50px; /* Button padding */
+    margin: 50px;
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Button text size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.service-button:hover {
+    background-color: #0a3d7a; /* Darker shade on hover */
+}
+
